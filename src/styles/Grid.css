@@ -16,7 +16,7 @@
 } */
 @media screen and (max-width: 290px) {
   .homeGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
   .homeGrid > * {
