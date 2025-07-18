@@ -1,0 +1,44 @@
+:root {
+  /* CSS HEX colors */
+  --main: #201f31;
+  --panel: #2b2a3c;
+  --prime: #d3bcccff;
+  --blind: #e8d7f1ff;
+  --logo: #d62839ff;
+  --fadedMain: rgba(var(--main), 0.6);
+  /* --pane: #4a306dff; */
+
+/* Background: --prussian-blue (#0e273c) 
+— deep dark blue for the main page background
+
+Logo & Primary Buttons: --crimson (#d62839) 
+— bold red for branding and call-to-actions
+
+Primary Text: --thistle (#d3bccc) 
+— soft off-white for readability on dark background
+
+Secondary Text / Info: --pale-purple (#e8d7f1) 
+— subtle light purple for metadata or less important text
+
+Navbar / Panels / Cards: --tekhelet (#4a306d) 
+— dark muted purple for sections and containers */
+
+  /*
+  --tekhelet: hsla(266, 39%, 31%, 1);
+  --thistle: hsla(318, 21%, 78%, 1);
+  --prussian-blue: hsla(207, 62%, 15%, 1);
+  --pale-purple: hsla(279, 48%, 89%, 1);
+  --crimson: hsla(354, 69%, 50%, 1);
+  */
+
+  /* Gradients */
+  --gradient-top: linear-gradient(0deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-right: linear-gradient(90deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-bottom: linear-gradient(180deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-left: linear-gradient(270deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-top-right: linear-gradient(45deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-bottom-right: linear-gradient(135deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-top-left: linear-gradient(225deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-bottom-left: linear-gradient(315deg, var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+  --gradient-radial: radial-gradient(var(--tekhelet), var(--thistle), var(--prussian-blue), var(--pale-purple), var(--crimson));
+}

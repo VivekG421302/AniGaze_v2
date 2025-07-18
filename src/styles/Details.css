@@ -1,0 +1,168 @@
+.detailsBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--prime);
+}
+.detailsBody > * {
+  max-width: 1400px;
+}
+.upperDetails {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 3fr 8fr 3fr;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.primaryDetails {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.posterDiv {
+  width: 100%;
+  max-width: 225px;
+  min-width: 160px;
+  position: relative;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.posterDiv > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.secondaryDetails {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.secondaryDetails > h1 {
+  color: var(--prime);
+  margin: 10px 0px;
+  padding-left: 10px;
+  border-left: 3px solid var(--logo);
+}
+.secondaryDetails > p {
+  margin: 10px 0px;
+  padding-left: 10px;
+}
+.secondaryDetails > p > .rating {
+  background-color: var(--prime);
+  color: var(--panel);
+  border: 1px solid var(--logo);
+  border-radius: 5px;
+  padding: 1px 10px;
+}
+.secondaryDetails > p > .episodes {
+  background-color: var(--panel);
+  color: var(--prime);
+  border: 1px solid var(--prime);
+  border-radius: 5px;
+  padding: 1px 5px;
+  margin: 10px;
+}
+
+.actionButtons {
+  width: 320px;
+  padding-left: 10px;
+  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+button.PrimeCTA {
+  background-color: var(--logo);
+  color: var(--blind);
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button.PrimeCTA:hover {
+  border: 1px solid var(--prime);
+  outline: 1px solid var(--prime);
+}
+
+button.BlindCTA {
+  background-color: var(--main);
+  color: var(--blind);
+  border: 1px solid var(--prime);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button.BlindCTA:hover {
+  background-color: var(--prime);
+  color: var(--main);
+}
+p.description {
+  color: var(--blind);
+  font-size: 0.9rem;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.tertiaryDetails {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.tertiaryDetails > h2 {
+  color: var(--prime);
+  font-size: 1.5rem;
+  margin: 10px 0px;
+  padding-left: 10px;
+  border-left: 3px solid var(--logo);
+}
+.detailLabel {
+  color: var(--blind);
+  margin-right: 10px;
+  opacity: 0.8;
+}
+.detailValue {
+  color: var(--prime);
+  margin-right: 5px;
+  opacity: 0.7;
+}
+.wishlistBtn {
+  width: 225px;
+  background-color: var(--prime);
+  color: var(--main);
+  border: 1px solid var(--panel);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 40px 20px 0px;
+  transition: all 0.2s ease-in-out;
+}
+.wishlistBtn:hover {
+  background-color: var(--logo);
+  color: var(--blind);
+  border: 1px solid transparent;
+}

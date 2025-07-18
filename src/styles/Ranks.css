@@ -1,0 +1,102 @@
+.ranksBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  background-color: var(--panel);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 20px 40px;
+  /* border: 1px solid red; */
+}
+.ranksBody > h2 {
+  width: 100%;
+  color: var(--prime);
+  font-size: 1.5rem;
+  padding-left: 10px;
+  border-left: 3px solid var(--logo);
+  margin-bottom: 20px;
+}
+.scrollWrapper {
+  width: 100%;
+  height: 100%;
+}
+.ranksScroller {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  align-items: center;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main) transparent;
+  padding-bottom: 15px;
+}
+
+.rankerCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 225px;
+  overflow: hidden;
+}
+.titlePillar {
+  color: var(--prime);
+  width: 40px;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 6fr 1fr;
+  /* align-items: start; */
+  padding-bottom: 2px;
+}
+.titlePillar > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titlePillar > h3.rank {
+  font-size: 32px;
+  color: var(--logo);
+  text-shadow: 1px 1px var(--prime);
+}
+
+.titlePillar > h3.name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-wrap: wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+}
+.posterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.posterContainer > img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ranksScroller::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ranksScroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ranksScroller::-webkit-scrollbar-thumb {
+  background-color: var(--prime);
+  border-radius: 10px;
+}

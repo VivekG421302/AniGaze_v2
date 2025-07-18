@@ -1,0 +1,53 @@
+@import "./colors.css";
+
+.homeBody {
+  /* border: 1px solid red; */
+  width: 100%;
+  min-width: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeGrid {
+  display: grid;
+  background-color: var(--panel);
+  border-radius: 29px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* slightly wider for card */
+  gap: 10px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.categoryWrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.CategoryScrolls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.categoryWrapper > .blogSidebar > .bloggersSpace {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .categoryWrapper {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+

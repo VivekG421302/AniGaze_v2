@@ -1,0 +1,237 @@
+.playerBody {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px 20px;
+  background: linear-gradient(
+    to bottom,
+    var(--main),
+    var(--panel),
+    var(--main),
+    var(--main),
+    var(--main),
+    var(--main)
+  );
+}
+button {
+  all: unset;
+  border-radius: 5px;
+  background-color: var(--prime);
+  color: var(--main);
+  padding: 0px 5px;
+  margin: 0px 5px;
+}
+.BreadCrum {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.playerWrapper {
+  width: 100%;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+}
+.episodeAreaBody {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.episodeAreaBody > h5 {
+  width: 100%;
+  padding: 5px 0px;
+}
+.episodeController {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--blind);
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.episodeController > * {
+  background-color: var(--panel);
+}
+.episodeController > select {
+  border-radius: 5px 0px 0px 5px;
+}
+.episodeController > input {
+  outline: none;
+  border: none;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.episodeGrid {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  overflow-y: scroll;
+}
+.episodeGrid > span.activeEpisode:hover,
+.episodeGrid > span.activeEpisode {
+  border: 1px solid var(--blind);
+  background-color: var(--logo);
+  color: var(--prime);
+}
+.episodeGrid > span {
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid var(--blind); */
+  transition: 0.05s ease-in-out 0.05s;
+  font-size: 1rem;
+  background-color: var(--panel);
+}
+.episodeGrid > span:hover {
+  cursor: pointer;
+  background-color: var(--blind);
+  color: var(--main);
+}
+.mediaAreaBody {
+  min-width: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.videoContainer {
+  position: relative;
+  /* min-height: 480px; */
+  width: 100%;
+  aspect-ratio: 2/1;
+  height: auto;
+  background: rgba(0, 0, 0, 0.2);
+}
+.videoContainer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.videoContainer:fullscreen .nextEpisodeOverlay,
+.videoContainer:-webkit-full-screen .nextEpisodeOverlay,
+.videoContainer:-moz-full-screen .nextEpisodeOverlay {
+  display: block !important;
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Ensure container is fullscreen-ready */
+.videoContainer:-webkit-full-screen,
+.videoContainer:-moz-full-screen,
+.videoContainer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+/* Style video element */
+.videoContainer:-webkit-full-screen video,
+.videoContainer:-moz-full-screen video,
+.videoContainer:fullscreen video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Next episode overlay positioning in fullscreen */
+.videoContainer:-webkit-full-screen .nextEpisodeOverlay,
+.videoContainer:-moz-full-screen .nextEpisodeOverlay,
+.videoContainer:fullscreen .nextEpisodeOverlay {
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.videoContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nextEpisodeOverlay {
+  position: absolute;
+  bottom: 80px; /* above controls */
+  right: 20px;
+  border: 1px solid var(--prime);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--prime);
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 9999;
+  cursor: pointer;
+}
+.videoContainer .nextEpisodeOverlay {
+  z-index: 10000;
+}
+.mediaController {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.episodeToggle {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--blind);
+  background-color: var(--main);
+  color: var(--prime);
+}
+.nextEpisodeOverlay {
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  border: 1px solid var(--blind);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--prime);
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.mediaInfo {
+  width: 100%;
+  display: flex;
+  border: 1px solid var(--prime);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.mediaInfo > h3 {
+  background-color: var(--prime);
+  padding: 10px 0px 10px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 4;
+}
+.mediaInfo > h3 > span {
+  color: var(--main);
+}
+.mediaInfo > p {
+  padding: 20px;
+}

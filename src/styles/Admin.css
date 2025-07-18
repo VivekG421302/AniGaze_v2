@@ -1,0 +1,320 @@
+.AdminBody {
+  width: 100%;
+  max-width: 1400px;
+  padding-top: 20px;
+  margin: auto;
+}
+.section1 {
+  display: flex;
+  gap: 10px;
+  background-color: var(--panel);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+.section1part1 {
+  min-width: 160px;
+  width: 100%;
+  max-width: 240px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.section1part1 > .posterDrop {
+  width: 100%;
+  aspect-ratio: 2/3;
+  display: flex;
+}
+.section1part1 > .bannerDrop {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.section1part2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex: 1;
+  gap: 20px;
+}
+.section1ChildInputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.section1part2 > .section1ChildInputWrapper > label {
+  font-size: 0.9rem;
+}
+.section1part2 > .section1ChildInputWrapper > input,
+.section1part2 > .section1ChildInputWrapper > textarea {
+  /* all: unset; */
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  background-color: var(--main);
+  color: var(--prime);
+  font-weight: 600;
+}
+.section1part2 > .section1ChildInputWrapper > textarea {
+  min-height: 100px;
+  resize: none;
+  white-space: wrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--logo) transparent;
+}
+/* === GENRE INPUTS === */
+.section3 {
+  padding: 20px;
+  background-color: var(--panel);
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  flex-grow: 1;
+}
+.section1ChildGenre {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.genreLabelRow {
+  max-width: 1000px;
+}
+.genreLabelRow,
+.genreSuggestionList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  white-space: wrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--logo) transparent;
+}
+/* Chosen Genres */
+.selectedGenresInline {
+  display: flex;
+  gap: 8px;
+}
+
+.selectedGenresInline::-webkit-scrollbar {
+  height: 6px;
+}
+
+.selectedGenresInline::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.genreBubble {
+  background: #f0f0f0;
+  color: #333;
+  padding: 3px;
+  padding-left: 10px;
+  border-radius: 16px;
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.genreBubble button {
+  background: none;
+  border: 1px solid var(--main);
+  border-radius: 50%;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* Genre Input */
+.genreInput {
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  background-color: var(--main);
+  color: var(--prime);
+  font-weight: 600;
+  border: 1px solid #767676;
+  outline: none;
+}
+
+/* Suggestions */
+.genreSuggestionList {
+  border: 1px solid #767676;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--main);
+}
+
+.genreSuggestionList::-webkit-scrollbar {
+  height: 6px;
+}
+
+.genreSuggestionList::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.genreSuggestionBubble {
+  padding: 6px 12px;
+  background-color: #d8c1c1;
+  color: #333;
+  border-radius: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.genreSuggestionBubble:hover {
+  background-color: #cbbaba;
+}
+
+/* === SECTION 2 === */
+.section2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--panel);
+  border-radius: 0px 0px 30px 30px;
+}
+
+.section2Selectors {
+  display: flex;
+  flex-direction: column;
+}
+.isSeasonInput > input {
+  background-color: var(--main);
+  padding: 10px;
+  border: 1px solid #767676;
+}
+.section2Selectors > select {
+  background-color: var(--main);
+  padding: 10px;
+}
+/* 
+.isSeasonAired {
+    grid-column: span 2;
+} */
+.isSeasonAired > .airedDateSelector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.airedDateSelector > span {
+  padding: 5px;
+}
+.airedInputs {
+  border: 1px solid #767676;
+  color: var(--prime);
+  padding: 10px 5px;
+  background-color: var(--main);
+}
+.broadcastSelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.broadcastSelector > span {
+  padding: 5px;
+}
+.broadcastSelector > input,
+.section2Selectors > input[type="text"] {
+  background-color: var(--main);
+  color: var(--prime);
+  padding: 10px 20px;
+  border: 1px solid #767676;
+  flex: 1;
+  gap: 10px;
+  margin: 0px 5px;
+}
+#weekSelector {
+  background-color: var(--main);
+  color: var(--prime);
+  padding: 10px 5px;
+  border: 1px solid #767676;
+}
+
+.section4 {
+  background-color: var(--panel);
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.section4 > .episodeTile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+  padding: 20px 0px;
+box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+
+}
+.episodeDropArea {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.episodeTileDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.episodeTileDetails > input {
+  background-color: var(--main);
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border: 1px solid #767676;
+  border-radius: 10px;
+}
+.episodeTileDetails > textarea {
+  background-color: var(--main);
+  color: var(--prime);
+  padding: 10px;
+  border: 1px solid #767676;
+  border-radius: 10px;
+  resize: none;
+  white-space: wrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--logo) transparent;
+}
+.episodeTileDetails > p {
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+}
+.episodeTileDetails > p > span {
+    color: #767676;
+}
+hr {
+    border-color: #767676;
+}
+hr.epTileDivider {
+    grid-column: span 2;
+}
+.addEpisodeButton {
+  padding: 10px 20px;
+  background-color: var(--main);
+  color: var(--prime);
+  font-weight: bold;
+  border: 1px solid var(--prime);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.addEpisodeButton:hover {
+  background-color: var(--prime);
+  color: var(--main);
+}

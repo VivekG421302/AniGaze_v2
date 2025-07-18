@@ -1,0 +1,284 @@
+@import "./colors.css";
+
+.HeroCurrosal {
+  width: 100%;
+  max-width: 1400px;
+  height: 500px;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--prime);
+  background-color: var(--main);
+  font-family: "Poppins", sans-serif;
+}
+
+div.visuals {
+  z-index: 1;
+  height: 100%;
+  width: calc(100% * 5);
+  display: flex;
+  position: relative;
+  animation: slide 30s infinite ease-in-out;
+}
+
+div.visualPanes {
+  /* position: absolute; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: start;
+  align-items: center;
+  background-size: auto 110%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.internalPane {
+  width: 90%;
+  height: 100%;
+  padding: 80px 40% 80px 50px;
+  background-color: var(--main);
+  position: relative;
+  overflow: visible;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.internalPane > div {
+  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+
+.internalPane > p {
+  color: var(--blind);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.internalPane > span {
+  color: var(--prime);
+}
+
+.internalPane > h1 {
+  font-size: 3.2rem;
+  color: var(--blind);
+  text-align: left;
+}
+
+.internalPane > * {
+  text-align: left;
+  width: 70%;
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+button.PrimeCTA {
+  background-color: var(--logo);
+  color: var(--blind);
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button.PrimeCTA:hover {
+  border: 1px solid var(--prime);
+  outline: 1px solid var(--prime);
+}
+
+button.BlindCTA {
+  background-color: var(--main);
+  color: var(--blind);
+  border: 1px solid var(--prime);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button.BlindCTA:hover {
+  background-color: var(--prime);
+  color: var(--main);
+}
+
+.visualPanes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Background images */
+.pane1,
+.pane6 {
+  background-image: url(./assets/onepiece.jpg);
+}
+.pane2 {
+  background-image: url(./assets/DrStone.jpeg);
+}
+.pane3 {
+  background-image: url(./assets/OnePunchMan.jpeg);
+}
+.pane4 {
+  background-image: url(./assets/DragonBallZ.jpeg);
+}
+.pane5 {
+  background-image: url(./assets/AttackOnTitan.webp);
+}
+
+/* Slide keyframes with quick transitions and long pauses */
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  18% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  
+  38% {
+    transform: translateX(-20%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+
+  58% {
+    transform: translateX(-40%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+
+  78% {
+    transform: translateX(-60%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+
+  98% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .HeroCurrosal {
+    height: 400px;
+  }
+  .internalPane > p {
+    line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+  .internalPane > h1 {
+    font-size: 2.4rem;
+    color: var(--blind);
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .HeroCurrosal {
+    height: 300px;
+  }
+  .internalPane > p {
+    display: none;
+  }
+  .internalPane > * {
+    width: 100%;
+  }
+  .internalPane > div {
+    grid-template-columns: 5fr 4fr;
+  }
+  .internalPane > div > * {
+    font-size: 0.6rem;
+    line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .HeroCurrosal {
+    height: 250px;
+  }
+
+  .internalPane > span {
+    font-size: 12px;
+  }
+  .internalPane > h1 {
+    font-size: 20px;
+  }
+  .internalPane > p {
+    display: none;
+  }
+
+  .visualPanes {
+    /* opacity: 0.7; */
+    background-size: cover !important;
+    background-position: center center;
+    padding-right: 20px;
+  }
+  
+  .internalPane {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    padding: 40px 20% 40px 20px;
+    position: relative;
+    overflow: visible;
+    background-color: transparent;
+    border: 5px dotted red;
+    mask-image: none;
+    -webkit-mask-image: none;
+    mask-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+}

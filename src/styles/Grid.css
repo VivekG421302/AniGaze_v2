@@ -1,0 +1,26 @@
+.homeGrid {
+  display: grid;
+  background-color: var(--panel);
+  border-radius: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* @media screen and (max-width: 410px) {
+  .homeGrid {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+} */
+@media screen and (max-width: 290px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .homeGrid > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}

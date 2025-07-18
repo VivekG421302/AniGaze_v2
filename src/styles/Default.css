@@ -1,0 +1,177 @@
+div.defaultBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+  margin: auto;
+}
+nav.defNav {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+}
+nav.defNav > ul {
+  width: 80%;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  list-style: none;
+}
+nav.defNav > ul > li {
+  padding: 0px 30px;
+}
+nav.defNav > ul > li > a {
+    color: var(--prime);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav.defNav > ul > li > a:hover {
+    color: var(--blind);
+}
+
+/* HERO */
+.defHero {
+  width: 80%;
+  height: 400px;
+  background-color: var(--panel);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.defHeroController {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 30px 40px;
+}
+.defHeroController > .defLogo {
+  width: 100%;
+  height: 40px;
+}
+.defHeroController > .defLogo > img {
+  height: 100%;
+}
+.defSearchBar {
+  border: 1px solid var(--prime);
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 250px 50px;
+  overflow: hidden;
+  margin: 20px 0px;
+  background-color: var(--main);
+  transition: border 0.5s ease, background-color 0.5s ease;
+}
+.defSearchBar > input {
+  width: 240px;
+  height: inherit;
+  border: none;
+  outline: none;
+  padding: 0px 20px;
+  font-size: 1rem;
+  color: var(--prime);
+  background-color: var(--main);
+  box-sizing: border-box;
+  transition: border 0.5s ease, background-color 0.5s ease;
+  border-radius: 10px 0px 0px 10px;
+}
+.defSearchBar > button {
+  all: unset;
+  width: 50px;
+  height: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.defSearchBar:has(button:hover) {
+  border: none;
+  background-color: var(--panel);
+}
+.defSearchBar:has(button:hover) input {
+  border: 1px solid var(--prime);
+  border-radius: 10px;
+}
+.defSearchBar > button:hover {
+  background-color: var(--prime);
+  border-radius: 10px;
+}
+.defSearchBar > button > img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.defTopLinks {
+  width: 360px;
+  font-size: 13px;
+}
+.defTopLinks > a {
+  color: var(--prime);
+  opacity: 0.7;
+  padding-right: 5px;
+  transition: all 0.1s ease;
+  text-decoration: none;
+}
+.defTopLinks > a:hover {
+  opacity: 1;
+}
+.defHeroPoster {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.defHeroPoster > img {
+  height: 90%;
+  opacity: 0.6;
+}
+.defaultShareBar {
+    width: 80%;
+    margin-left: -30px;
+}
+.blogSection {
+    width: 80%;
+    padding: 20px;
+    background-color: var(--panel);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.blogSection > * {
+    color: var(--prime);
+}
+.defaultFooter {
+    width: 80%;
+}
+.blogContentWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.blogPosts {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}

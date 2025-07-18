@@ -1,0 +1,78 @@
+.blogSidebar {
+  flex: 1;
+  background-color: var(--main);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: var(--prime);
+  overflow-y: hidden;
+}
+
+.blogSidebar h3 {
+  margin: 20px 0px 10px;
+  font-size: 1rem;
+  color: var(--prime);
+}
+
+.blogSidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.blogSidebar ul li a {
+  text-decoration: none;
+  color: var(--prime);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.blogSidebar ul li a:hover {
+  opacity: 1;
+}
+
+.blogSidebar blockquote {
+  font-style: italic;
+  font-size: 0.9rem;
+  border-left: 4px solid var(--prime);
+  padding-left: 10px;
+  margin: 10px 0 20px;
+}
+.blogSidebar .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: stretch; /* Not always respected for wrapped items */
+}
+
+.blogSidebar .tags span {
+  flex-grow: 1;
+  padding: 8px 12px;
+  background-color: var(--prime);
+  color: var(--main);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+.blogSidebar ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+.blogSidebar h3 {
+    display: none;
+  }
+blockquote {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  aside.blogSidebar {
+    display: none;
+  }
+}
+

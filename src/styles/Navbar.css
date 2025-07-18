@@ -1,0 +1,239 @@
+@import "./colors.css";
+
+/* BODY */
+.navBody {
+  background-color: var(--main);
+  color: var(--prime);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 0.6rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* DIVISION */
+.leftNav,
+.rightNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* LEFT SIDE */
+.navBody > .leftNav > details {
+  display: inline-block;
+  position: relative;
+  z-index: 1000;
+}
+
+details > summary {
+  all: unset;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+summary > img {
+  width: 30px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+#random,
+#community {
+  display: none;
+}
+.NavbarBody {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  border: 1px solid var(--prime);
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+details:not([open]) .NavbarBody {
+  display: none;
+}
+
+.navLogo {
+  height: 100%;
+}
+.navLogo > img {
+  height: 25px;
+}
+
+/* SEARCH BAR */
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--blind);
+  border-radius: 10px;
+  border: 1px solid #fff;
+  height: 40px;
+  padding: 0px 0.5rem;
+}
+.searchInput {
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px 0px 0px 10px;
+  height: 100%;
+  border: 1px solid var(--prime);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  caret-color: var(--logo);
+  width: 150px;
+  color: #000;
+}
+.searchButton {
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.searchButton > img {
+  height: 20px;
+}
+
+.navFilter .filterSelect {
+  padding: 0.3rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--main);
+  border: none;
+  color: var(--prime);
+  border-radius: 7px;
+  text-align: center;
+}
+.navFilter .filterSelect:hover {
+  outline: 1px solid var(--logo);
+}
+.navFilter .filterSelect:not(:hover) {
+  transform: scale(0px);
+}
+.navFilter .filterSelect:open {
+  outline: none;
+  border-radius: 7px 7px 0px 0px;
+}
+.navFilter {
+  border-radius: 0px 0px 7px 7px;
+}
+
+/* OTHER NAV BUTTONS */
+.otherNavs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.otherNavs button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 70px;
+  height: 100%;
+  color: var(--prime);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid var(--blind); */
+}
+
+.navAddons > img {
+  width: 50%;
+  padding: 0.3rem;
+}
+
+#navShareImgs {
+  height: 35px;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+}
+
+.navProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0px 1rem;
+  border-left: 1px solid var(--prime);
+}
+.navProfile img {
+  height: 35px;
+  border-radius: 50%;
+  padding: 0.1rem;
+  border: 2px solid var(--prime);
+}
+.navBorder {
+  margin-top: 80px;
+}
+.searchToggle {
+  height: 30px;
+  aspect-ratio: 1/1;
+  display: none;
+}
+.searchToggle img {
+  height: 30px;
+}
+#backUpSearcher {
+  grid-column: 1/4;
+  display: none;
+  transition: all 0.3s ease;
+}
+#backUpSearcher input {
+  width: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navShare {
+    display: none;
+  }
+  .navProfile{
+    border: none;
+    padding: 0px;
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .otherNavs {
+    display: none;
+  }
+  #random,
+  #community {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  #firstSearchBar {
+    display: none;
+  }
+  .searchToggle {
+    display: block;
+  }
+  #backUpSearcher {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navBody {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+}
+

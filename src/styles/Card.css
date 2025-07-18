@@ -1,0 +1,193 @@
+@import "./colors.css";
+
+.cardBody {
+  min-width: 0px;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 2 / 3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: var(--main);
+  flex: 0 0 auto;
+}
+
+.cardBody:hover {
+  transform: scale(1.03);
+  .cardImg {
+    opacity: 0.5;
+  }
+}
+
+.cardPoster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+  transition: opacity 0.4s ease-in-out 0.6s;
+}
+
+/* .cardTitle {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 8px;
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.cardTitle > h4 {
+  line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: var(--blind);
+  text-shadow: 0px 0.1px var(--logo);
+}
+
+.cardTitle > p {
+  color: var(--prime);
+  font-size: 13px;
+  opacity: 0.8;
+} */
+
+.cardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--blind);
+  text-shadow: 0px 1.5px var(--main);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  z-index: 3;
+  border-radius: 8px;
+  transition: opacity 0.4s ease-in-out 0.6s;
+}
+
+.cardBody:hover .cardBack {
+  opacity: 1;
+}
+
+.cardBack h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: var(--blind);
+  text-shadow: 0px 0.1px var(--logo);
+}
+
+.primeStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.Desc {
+  font-size: 12px;
+  margin-bottom: 4px;
+  line-clamp: 4;
+  text-wrap: wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.followGenre {
+  font-size: 12px;
+  color: var(--prime);
+}
+
+.CTAs {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 3fr 2fr;
+  justify-content: space-between; */
+}
+
+.CTAs > .watch {
+  width: 100%;
+  background-color: var(--logo);
+  color: var(--blind);
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.CTAs > .watch:hover {
+  border: 1px solid var(--prime);
+  outline: 1px solid var(--prime);
+}
+
+.CTAs > .knowMore {
+  background-color: var(--main);
+  color: var(--blind);
+  border: 1px solid var(--prime);
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.CTAs .knowMore:hover {
+  background-color: var(--prime);
+  color: var(--main);
+}
+/* @media screen and (max-width: 400px) {
+  .cardBody {
+    width: 140px;
+  }
+} */
