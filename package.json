@@ -1,12 +1,9 @@
 {
-  "homepage": "https://VivekG421302.github.io/AniGaze_v2",
   "name": "anigaze",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
