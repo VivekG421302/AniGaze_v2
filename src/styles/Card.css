@@ -3,7 +3,7 @@
 .cardBody {
   min-width: 0px;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   aspect-ratio: 2 / 3;
   position: relative;
   overflow: hidden;
