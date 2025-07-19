@@ -139,19 +139,19 @@ button.BlindCTA:hover {
 /* Background images */
 .pane1,
 .pane6 {
-  background-image: url(./assets/onepiece.jpg);
+  background-image: url(/assets/onepiece.jpg);
 }
 .pane2 {
-  background-image: url(./assets/DrStone.jpeg);
+  background-image: url(/assets/DrStone.jpeg);
 }
 .pane3 {
-  background-image: url(./assets/OnePunchMan.jpeg);
+  background-image: url(/assets/OnePunchMan.jpeg);
 }
 .pane4 {
-  background-image: url(./assets/DragonBallZ.jpeg);
+  background-image: url(/assets/DragonBallZ.jpeg);
 }
 .pane5 {
-  background-image: url(./assets/AttackOnTitan.webp);
+  background-image: url(/assets/AttackOnTitan.webp);
 }
 
 /* Slide keyframes with quick transitions and long pauses */
