@@ -9,6 +9,7 @@ function Default() {
   const navigate = useNavigate();
   return (
     <div className="defaultBody">
+      {/* 1. Navbar */}
       <nav className="defNav">
         <ul>
           <li>
@@ -28,7 +29,10 @@ function Default() {
           </li>
         </ul>
       </nav>
+
+      {/* 2. Hero */}
       <div className="defHero">
+        
         <div className="defHeroController">
           <Link to={"/home"} className="defLogo">
             <img src="./assets/AniGaze white.png" alt="AniGaze" />
@@ -58,13 +62,18 @@ function Default() {
             <a href="">Frieren: Beyond Journey's End</a>
           </div>
         </div>
+
         <div className="defHeroPoster">
           <img src="./assets/bitmo.png" alt="" title="Search There!" />
         </div>
       </div>
+
+      {/* 3. ShareBar */}
       <div className="defaultShareBar">
         <Sharebar />
       </div>
+
+      {/* 4. Blog Section */}
       <div className="blogSection">
         <h2>Latest Blog Posts</h2>
         <div className="blogContentWrapper">
@@ -176,6 +185,8 @@ function Default() {
          <SideBar />
         </div>
       </div>
+
+      {/* 5. Footer */}
       <div className="defaultFooter">
         <Footer />
       </div>
