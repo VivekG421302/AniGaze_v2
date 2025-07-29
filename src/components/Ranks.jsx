@@ -6,7 +6,7 @@ function Ranks(props) {
   console.log(`Ranks: ${ranks}\n ${props.header}\n ${props.rank}`);
   return (
     <>
-      <div className="ranksBody">
+      <div className="ranksBody" id="Ranks">
         <h2>{props.header}</h2>
         <div className="scrollWrapper">
           <div className="ranksScroller">

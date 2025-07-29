@@ -1,11 +1,21 @@
 :root {
   /* CSS HEX colors */
   --main: #201f31;
-  --panel: #2b2a3c;
-  --prime: #d3bcccff;
+  /* --panel: #26253b; */
+  --panel: #2c2b45; /*Soft Indigo*/
+  --prime: #d3bccc;
+  --blind: #e8d7f1;
+  --logo: #d62839;
+  --fadedMain: rgba(var(--main), 0.6);
+
+  
+  /*Pallet 2 
+  --main: #030023;
+  --panel: #100D36;
+  --prime: #d3bccc;
   --blind: #e8d7f1ff;
   --logo: #d62839ff;
-  --fadedMain: rgba(var(--main), 0.6);
+  --fadedMain: rgba(var(--main), 0.6); */
   /* --pane: #4a306dff; */
 
 /* Background: --prussian-blue (#0e273c) 

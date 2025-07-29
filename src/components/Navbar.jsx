@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="navBody">
+      <div className="navBody" id="Navbar">
         <div className="leftNav">
           <details>
             <summary>
@@ -116,7 +116,7 @@ function Navbar() {
           </div>
         )}
       </div>
-      <div className="navBorder"></div>
+      <div className="navBorder" id="Base"></div>
     </>
   );
 }

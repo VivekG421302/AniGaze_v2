@@ -22,7 +22,7 @@ function Card({ data }) {
   const coverImg = `/Cover/${Cover}.jpg`; // adjust if image path differs
 
   return (
-    <Link to="/details" className="cardBody">
+    <Link to="/details#Navbar" className="cardBody">
       <div className="cardFace">
         <div className="cardPoster" >
           <img src={coverImg} alt={Title} className="cardImg" />

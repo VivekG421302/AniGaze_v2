@@ -13,7 +13,7 @@ function Banner() {
     "One Piece",
   ];
   return (
-    <div className="HeroCurrosal">
+    <div className="HeroCurrosal" id="Hero">
       <div className="visuals">
         {bannerTitles.map((title, index) => (
           <div className={`pane${index + 1} visualPanes`} key={index}>

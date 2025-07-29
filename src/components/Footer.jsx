@@ -3,7 +3,7 @@ import "../styles/Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" id="Footer">
       <div className="upperside">
         <a href="/">
           <img
