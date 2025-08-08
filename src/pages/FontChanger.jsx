@@ -131,7 +131,7 @@ export default function FontChanger() {
       >
         Font Changes to ({fonts[fontIndex] || "Loading..."})
       </h1>
-      <p>Click or press Space to change font</p>
+      <p>Click here or press Space to change font</p>
     </div>
   );
 }
