@@ -65,6 +65,28 @@ useEffect(() => {
   return () => window.removeEventListener("keydown", handleKeyDown);
 }, [fonts]);
 
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.code === "Space" || e.code === "ArrowRight" || e.code === "ArrowDown") {
+      e.preventDefault();
+      changeFont(); // Next font
+    }
+    if (e.code === "ArrowLeft" || e.code === "ArrowUp") {
+      e.preventDefault();
+      setFontIndex((prev) => {
+        const newIndex = (prev - 1 + fonts.length) % fonts.length;
+        if (fonts[newIndex]) {
+          loadFont(fonts[newIndex]);
+        }
+        return newIndex;
+      });
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [fonts]);
+
   return (
     <div
       style={{
