@@ -9,6 +9,8 @@ import Admin from "./pages/Admin";
 import UploadTester from "./pages/UploadTester";
 import BufferPlayer from "./Dump/BufferPlayer";
 import Colour from "./pages/Colour";
+import Demo from "./pages/Demo";
+import FontChanger from "./pages/FontChanger";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
     // <Player/>
     <Router>
       <Routes>
+        <Route path="/fonts" element={<FontChanger />} />
         <Route path="/" element={<Default />} />
         <Route path="/home" element={<Home />} />
         <Route path="/details" element={<Details />} />
@@ -27,6 +30,7 @@ function App() {
         <Route path="/test" element={<UploadTester/>} />
         <Route path="/buff" element={<BufferPlayer/>} />
         <Route path="/colour" element={<Colour/>} />
+        <Route path="/demo" element={<Demo/>} />
       </Routes>
     </Router>
   );
